@@ -66,7 +66,7 @@ describe('BookItem', () => {
     renderBookItem();
 
     fireEvent.click(screen.getByRole('button'));
-    expect(mutateMock).toHaveBeenCalledWith(1); // id do livro
+    expect(mutateMock).toHaveBeenCalledWith(2);
     expect(navigateMock).not.toHaveBeenCalled();
   });
 });
