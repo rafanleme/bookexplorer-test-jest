@@ -15,9 +15,7 @@ export default {
   transform: {
     "^.+\\.(ts|tsx|js|jsx)$": "ts-jest",
   },
-
   collectCoverage: true,
-
   collectCoverageFrom: [
     "src/**/*.{ts,tsx}",
     "!src/**/*.d.ts",
@@ -26,7 +24,13 @@ export default {
     "!src/**/index.ts",
     "!src/.tsx",
   ],
-  coverageDirectory: "coverage",
-
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80,
+    },
+  },
   coverageReporters: ["html", "text"],
 };
